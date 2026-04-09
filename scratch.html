@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jamie's Space Page</title>
+  <title>I Love a Good Deal!</title>
   <link rel="stylesheet" href="mystyles.css" />
   <style>
     nav { background:#2980b9; padding:12px 20px; margin:-20px -20px 30px; }
@@ -41,13 +41,12 @@
 
   <div class="main-container">
 
-    <h1>My Passion for Astronomy</h1>
+    <h1>My Passion for a good deal!</h1>
     
     <p id="about">
-      I got my first telescope when I was twelve. My dad and I set it up in the backyard on a cold October
-      night, pointed it at the moon, and I completely lost it when I could actually see the craters.
-      That was it for me. Now I spend way too much time reading about black holes and watching NASA
-      livestreams at 2am.
+      I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children,
+      and that's when someone introduced me to couponing! I was hooked. Over the years, couponing has changed and is done more
+      online. But the rush of getting a good deal is still alive and well!
     </p>
 
     <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=900&q=80"
@@ -55,21 +54,21 @@
 
     <p><a href="#quiz">Jump to the Space Quiz ↓</a></p>
 
-    <h2>My Astronomy Journey</h2>
+    <h2>My Deal Seeking Journey</h2>
     <ol>
-      <li>Got my first telescope (age 12)</li>
+      <li>Purhcased my first coupons (age 22)</li>
       <li>
-        Started learning the constellations:
+        Started learning the tricks and trades of the couponing world:
         <ul>
-          <li>Orion</li>
-          <li>Ursa Major (Big Dipper)</li>
-          <li>Cassiopeia</li>
-          <li>Scorpius</li>
+          <li>Dumpster Dive</li>
+          <li>Run Deal</li>
+          <li>4 or more</li>
+          <li>Stacking</li>
         </ul>
       </li>
-      <li>Joined a local stargazing club</li>
-      <li>Started following NASA and ESA news daily</li>
-      <li>Currently saving up for a better telescope</li>
+      <li>Joined a local couponing club</li>
+      <li>Started following couponing IG and FB pages daily</li>
+      <li>Currently chasing online deals only</li>
     </ol>
 
     <div class="video-section" id="video-section">
@@ -120,77 +119,16 @@
         vizElement.parentNode.insertBefore(scriptElement, vizElement);                
       </script>
     </div>
-
-    <h2 id="quiz">Solar System Quiz 🚀</h2>
-    <p>I built this little quiz with some help. Test how much you know!</p>
-    <div id="quiz-box">
-      <p id="q-text">Loading question...</p>
-      <div id="options"></div>
-      <p id="feedback"></p>
-      <div id="quiz-controls">
-        <button onclick="nextQuestion()">Next Question</button>
-        <span id="score-display">Score: 0 / 0</span>
       </div>
     </div>
-
   </div>
-
   <footer>
-    <p>Made by Jamie Walker | IS 201 | BYU | 2025</p>
+    <p>Made by Marcia Lealao | IS 201 | BYU | 2026</p>
     <a href="index.html">← Back to Portfolio</a>
   </footer>
 
   <script>
-    const questions = [
-      { q:"What is the largest planet in our solar system?", options:["Earth","Saturn","Jupiter","Uranus"], answer:"Jupiter" },
-      { q:"How many moons does Mars have?", options:["0","1","2","4"], answer:"2" },
-      { q:"What planet is known as the Red Planet?", options:["Venus","Mars","Mercury","Neptune"], answer:"Mars" },
-      { q:"Which planet has the most rings?", options:["Jupiter","Neptune","Uranus","Saturn"], answer:"Saturn" },
-      { q:"What is the closest star to Earth?", options:["Sirius","Betelgeuse","The Sun","Proxima Centauri"], answer:"The Sun" },
-      { q:"How long does light from the Sun take to reach Earth?", options:["8 minutes","1 hour","1 second","8 hours"], answer:"8 minutes" },
-    ];
-
-    let current = 0, score = 0, total = 0, answered = false;
-
-    function loadQuestion() {
-      answered = false;
-      const q = questions[current];
-      document.getElementById("q-text").textContent = `Q${current + 1}: ${q.q}`;
-      document.getElementById("feedback").textContent = "";
-      const opts = document.getElementById("options");
-      opts.innerHTML = "";
-      q.options.forEach(opt => {
-        const btn = document.createElement("button");
-        btn.className = "opt-btn";
-        btn.textContent = opt;
-        btn.onclick = () => checkAnswer(opt, q.answer);
-        opts.appendChild(btn);
-      });
-    }
-
-    function checkAnswer(selected, correct) {
-      if (answered) return;
-      answered = true;
-      total++;
-      const fb = document.getElementById("feedback");
-      if (selected === correct) {
-        score++;
-        fb.textContent = "✅ Correct!";
-        fb.style.color = "#27ae60";
-      } else {
-        fb.textContent = `❌ Wrong! The answer is: ${correct}`;
-        fb.style.color = "#c0392b";
-      }
-      document.getElementById("score-display").textContent = `Score: ${score} / ${total}`;
-      document.querySelectorAll(".opt-btn").forEach(b => b.disabled = true);
-    }
-
-    function nextQuestion() {
-      current = (current + 1) % questions.length;
-      loadQuestion();
-    }
-
-    loadQuestion();
+    
   </script>
 </body>
 </html>
