@@ -1,76 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Marketing Insights - Scratch Page</title>
-    <link rel="stylesheet" href="mystyles.css">
-</head>
-<body>
-
-<div class="main-container">
-    <nav>
-        <a href="index.html">Back to Professional Resume</a> | 
-        <a href="#graph-anchor">Jump to Data Graph</a>
-    </nav>
-
-    <h1>Marketing & Research Deep Dive</h1>
-    <p>This page demonstrates the technical side of marketing research and data visualization.</p>
-
-    <!-- Requirement: Nested List -->
-    <h3>Core Research Methodologies</h3>
-    <ul>
-        <li>Primary Research
-            <ol>
-                <li>Focus Groups</li>
-                <li>Customer Surveys</li>
-            </ol>
-        </li>
-        <li>Secondary Research
-            <ol>
-                <li>Competitive Analysis</li>
-                <li>Industry Reports</li>
-            </ol>
-        </li>
-    </ul>
-
-    <!-- Requirement: Image not from Bootstrap -->
-    <h3>Visualizing Strategy</h3>
-    <!-- Changed to a direct image link so it actually appears -->
-    <img src="https://unsplash.com" alt="Marketing Data" style="width:100%; border-radius:8px;">
-
-    <!-- Requirement: YouTube Video -->
-    <div class="video-section">
-        <h3>Featured Marketing Video</h3>
-        <!-- Changed to a full EMBED link -->
-        <iframe width="560" height="315" 
-            src="https://youtube.com" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <!-- Requirement: Tableau Graph & On-page Anchor -->
-    <div id="graph-anchor" class="graph-section">
-        <h3>Interactive Market Data</h3>
-        <div class='tableauPlaceholder' id='viz1712615000000' style='position: relative; width: 100%; height: 500px;'>
-            <object class='tableauViz' width='100%' height='500' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='embed_code_version' value='3' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='RegionalSampleWorkbook&#47;College' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image' value='https%3A%2F%2Fpublic.tableau.com%2Fstatic%2Fimages%2FRe%2FRegionalSampleWorkbook%2FCollege%2F1.png' /> 
-            </object>
-        </div>
-        <!-- Changed to the full Tableau Javascript link -->
-        <script type='text/javascript' src='https://tableau.com'></script>
-    </div>
-    
-    <p style="margin-top: 40px;"><a href="app.html">Next: Try my AI Web App Game!</a></p>
+<!-- ULTRA-COMPATIBLE YOUTUBE -->
+<div class="video-section">
+    <h3>Featured Video</h3>
+    <iframe width="560" height="315" 
+        src="https://youtube-nocookie.com" 
+        frameborder="0" allowfullscreen>
+    </iframe>
 </div>
 
-</body>
-</html>
+<!-- ULTRA-COMPATIBLE TABLEAU -->
+<div class="graph-section">
+    <h3>Interactive Graph</h3>
+    <div id='vizContainer' style='width: 100%; height: 500px;'>
+        <script type='text/javascript' src='https://tableau.com'></script>
+        <object class='tableauViz' width='100%' height='500' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='name' value='RegionalSampleWorkbook&#47;College' />
+            <param name='toolbar' value='yes' />
+        </object>
+    </div>
+</div>
+
