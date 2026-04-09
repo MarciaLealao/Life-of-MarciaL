@@ -5,21 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Deal Hunter's Den</title>
   <link rel="stylesheet" href="mystyles.css" />
-  <style>
-    /* Requirement: Custom background, font color, and font family */
-    body { background-color: #f4f7f6; font-family: 'Verdana', sans-serif; color: #333; margin: 0; padding: 20px; }
-    nav { background:#27ae60; padding:15px; margin:-20px -20px 30px; text-align: center; }
-    nav a { color:#fff; text-decoration:none; margin: 0 15px; font-weight:bold; }
-    
-    /* Requirement: 3 Divs for positioning/styling */
-    .main-container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .media-block { background: #e8f5e9; padding: 20px; border-radius: 10px; margin: 20px 0; }
-    .app-box { border: 2px dashed #27ae60; padding: 25px; text-align: center; border-radius: 10px; background: #fff; }
-    
-    h1, h2 { color: #2e7d32; }
-    img { width: 100%; border-radius: 8px; margin: 20px 0; }
-    button { background: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-  </style>
 </head>
 <body>
 
@@ -49,12 +34,12 @@
       <li>Currently chasing online-only digital stacks.</li>
     </ol>
 
-    <div class="media-block" id="video">
+    <div class="video-section" id="video">
       <h2>Learn the "Stacking" Method</h2>
       <iframe width="100%" height="400" src="https://www.youtube.com/embed/P78_O62-D-A" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <div id="tableau">
+    <div class="graph-section" id="tableau">
       <h2>Consumer Spending Trends</h2>
       <div class='tableauPlaceholder' id='viz1715800000000' style='position: relative'>
         <object class='tableauViz' style='display:none;'>
@@ -67,7 +52,7 @@
       <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
     </div>
 
-    <div class="app-box" id="app">
+    <div class="graph-section" id="app">
         <h2>Savings Goal Calculator</h2>
         <p>If you save this much per week, how long until your next big purchase?</p>
         <input type="number" id="weekly" placeholder="Weekly Savings ($)">
