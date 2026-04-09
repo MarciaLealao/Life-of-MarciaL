@@ -5,13 +5,14 @@ body {
     color: #2c3e50; 
     line-height: 1.6;
     margin: 0;
+    padding-top: 100px;
     /* Removed padding: 20px here so it doesn't break the left-side navigation bar */
 }
 
 /* Div 1 for positioning - Wraps all sections into a neat card */
 .main-container { 
     max-width: 950px; /* Slightly wider to fit resume content nicely */
-    margin: 40px auto; /* Centers the card and gives top/bottom breathing room */
+    margin: 0 auto 40px auto; /* Centers the card and gives bottom breathing room */
     background: white;
     padding: 50px;
     border-radius: 8px;
@@ -44,20 +45,30 @@ h1 {
 
 /* Style the main sidebar background */
 #sideNav {
-    background-color: #2c3e50 !important; 
-    padding-top: 20px;
+    background-color: #1a252f !important; /* Menu background color */
+    padding: 15px 0;
+    width: 100%;
 }
 
 /* Ensure the list takes up the full width of the sidebar */
 .navbar-nav {
+    list-style: none !important; /* Removes bullet points */
+    display: flex !important;
+    flex-direction: row !important; /* Forces side by side */
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 0 15px; /* Adds a little breathing room on the sides */
+    margin: 0;
+    padding: 0;
+    gap: 15px; 
+    overflow-x: auto; /* Allows scrolling if menu is too long on small screens */
 }
 
 /* Space out the items slightly */
 .nav-item {
-    width: 100%;
-    margin-bottom: 8px;
+    list-style: none !important; /* Extra override to remove bullet points */
+    width: auto; 
+    margin-bottom: 0;
 }
 
 /* Turn the plain links into thick, rectangular blocks */
@@ -65,17 +76,18 @@ h1 {
     display: block;
     background-color: #34495e; /* Default dark rectangular button */
     color: #ffffff !important;
-    padding: 15px 20px !important;
+    padding: 12px 24px !important;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1.5px;
     border-radius: 4px; /* Optional: gives the rectangles a slightly soft edge */
     transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text inside buttons from wrapping */
 }
 
 /* Change color when the mouse hovers over the rectangle */
 .nav-link:hover {
     background-color: #2980b9 !important; /* Bright blue hover effect */
-    transform: translateX(5px); /* Creates a cool sliding effect on hover */
+    transform: translateY(-3px); /* Creates a cool sliding effect upwards for horizontal layout */
 }
