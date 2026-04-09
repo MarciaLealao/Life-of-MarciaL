@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcia's Deals</title>
+  <link href="mystyles.css" rel="stylesheet" />
   <style>
     /* This is the styling you liked - all in one place now */
     body { 
@@ -79,6 +80,21 @@
     input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin: 5px; }
 
     footer { text-align: center; padding: 20px; color: #888; font-size: 0.9em; }
+    /* --- Centering Enhancements --- */
+h1, h2 {
+    text-align: center;
+}
+
+/* Centers the list block but keeps the text inside aligned left for readability */
+ol {
+    display: inline-block;
+    text-align: left;
+}
+
+/* This makes sure the container holding the list behaves like a center-aligned block */
+.main-container {
+    text-align: center;
+}
   </style>
 </head>
 <body>
@@ -94,7 +110,7 @@
     <h1>My Passion for a Great Deal!</h1>
     <p>I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children, and that's when someone introduced me to couponing! I was hooked.</p>
 
-    <img <div style="text-align: center;">
+    <div style="text-align: center;">
     <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=900" 
      alt="Couponing Stockpile" 
      style="width: 400px; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
