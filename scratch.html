@@ -33,15 +33,15 @@
         </li>
     </ul>
 
-    <!-- Requirement: Image (Fixed Link) -->
+    <!-- Requirement: Image (Direct secure link) -->
     <h3>Visualizing Strategy</h3>
     <img src="https://unsplash.com" alt="Marketing Data" style="width:100%; border-radius:8px;">
 
-    <!-- Requirement: YouTube (Fixed to a specific Embed URL) -->
+    <!-- Requirement: YouTube (Forced HTTPS Embed) -->
     <div class="video-section">
         <h3>Featured Marketing Video</h3>
         <iframe width="100%" height="400" 
-            src="https://youtube.com" 
+            src="https://youtube-nocookie.com" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -49,21 +49,14 @@
         </iframe>
     </div>
 
-    <!-- Requirement: Tableau Graph (Fixed to full public.tableau.com links) -->
+    <!-- Requirement: Tableau Graph (Using the latest Embedding API v3) -->
     <div id="graph-anchor" class="graph-section">
         <h3>Interactive Market Data</h3>
-        <div class='tableauPlaceholder' id='viz1712615000000' style='position: relative; width: 100%; height: 500px;'>
-            <object class='tableauViz' width='100%' height='500' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='embed_code_version' value='3' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='RegionalSampleWorkbook&#47;College' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-            </object>
-        </div>
-        <!-- This script link MUST be the full address to load the graph -->
-        <script type='text/javascript' src='https://tableau.com'></script>
+        <script type="module" src="https://tableau.com"></script>
+        <tableau-viz id="tableauViz" 
+            src="https://tableau.com" 
+            toolbar="bottom" hide-tabs>
+        </tableau-viz>
     </div>
     
     <p style="margin-top: 40px;"><a href="app.html">Next: Try my AI Web App Game!</a></p>
