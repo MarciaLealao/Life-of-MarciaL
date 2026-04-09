@@ -91,3 +91,7 @@ h1 {
     background-color: #2980b9 !important; /* Bright blue hover effect */
     transform: translateY(-3px); /* Creates a cool sliding effect upwards for horizontal layout */
 }
+/* Only applies if the page isn't using the fixed Bootstrap nav */
+.main-container {
+    margin-top: 20px; 
+}
