@@ -39,28 +39,32 @@
 
     <!-- Requirement: YouTube (FIXED FULL LINK) -->
     <div class="video-section">
-        <h3>Featured Marketing Video</h3>
-        <iframe width="100%" height="400" 
-            src="https://youtube-nocookie.com" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
+    <h3>Featured Marketing Video</h3>
+    <!-- The '/embed/' and the specific ID at the end are required -->
+    <iframe width="100%" height="400" 
+        src="https://youtube.com" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+</div>
+
 
     <!-- Requirement: Tableau (FIXED FULL LINK) -->
-    <div id="graph-anchor" class="graph-section">
-        <h3>Interactive Market Data</h3>
-        <div class='tableauPlaceholder' id='viz1712615000000' style='position: relative; width: 100%; height: 500px;'>
-            <object class='tableauViz' width='100%' height='500' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%://tableau.com%2F' /> 
-                <param name='name' value='RegionalSampleWorkbook&#47;College' />
-                <param name='toolbar' value='yes' />
-            </object>
-        </div>
-        <script type='text/javascript' src='https://tableau.com'></script>
+   <div id="graph-anchor" class="graph-section">
+    <h3>Interactive Market Data</h3>
+    <div class='tableauPlaceholder' style='position: relative; width: 100%; height: 500px;'>
+        <object class='tableauViz' width='100%' height='500' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='name' value='RegionalSampleWorkbook&#47;College' />
+            <param name='toolbar' value='yes' />
+        </object>
     </div>
+    <!-- This full link is the "engine" that makes the graph appear -->
+    <script type='text/javascript' src='https://tableau.com'></script>
+</div>
+
     
     <p style="margin-top: 40px;"><a href="app.html">Next: Try my AI Web App Game!</a></p>
 </div>
