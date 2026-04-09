@@ -1,73 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Marketing Insights - Scratch Page</title>
+    <title>Marketing Scratch Page</title>
     <link rel="stylesheet" href="mystyles.css">
 </head>
 <body>
+    <div class="main-container">
+        <nav><a href="index.html">Back to Resume</a></nav>
+        <h1>Marketing Deep Dive</h1>
+        
+        <!-- Requirement: Nested List -->
+        <ul>
+            <li>Research Types
+                <ol>
+                    <li>Primary</li>
+                    <li>Secondary</li>
+                </ol>
+            </li>
+        </ul>
 
-<div class="main-container">
-    <nav>
-        <a href="index.html">Back to Professional Resume</a> | 
-        <a href="#graph-anchor">Jump to Data Graph</a>
-    </nav>
+        <!-- Requirement: Image (Using a direct link that works) -->
+        <img src="https://unsplash.com" alt="Data" style="width:100%; border-radius:10px;">
 
-    <h1>Marketing & Research Deep Dive</h1>
-    <p>This page demonstrates the technical side of marketing research and data visualization.</p>
+        <!-- Requirement: YouTube (Basic Embed - No extra settings) -->
+        <div style="margin: 20px 0;">
+            <h3>Featured Video</h3>
+            <iframe width="100%" height="315" src="https://youtube.com" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <!-- Requirement: Nested List -->
-    <h3>Core Research Methodologies</h3>
-    <ul>
-        <li>Primary Research
-            <ol>
-                <li>Focus Groups</li>
-                <li>Customer Surveys</li>
-            </ol>
-        </li>
-        <li>Secondary Research
-            <ol>
-                <li>Competitive Analysis</li>
-                <li>Industry Reports</li>
-            </ol>
-        </li>
-    </ul>
-
-    <!-- Requirement: Image (Direct link) -->
-    <h3>Visualizing Strategy</h3>
-    <img src="https://unsplash.com" alt="Marketing Data" style="width:100%; border-radius:8px;">
-
-    <!-- Requirement: YouTube (FIXED FULL LINK) -->
-    <div class="video-section">
-    <h3>Featured Marketing Video</h3>
-    <!-- The '/embed/' and the specific ID at the end are required -->
-    <iframe width="100%" height="400" 
-        src="https://youtube.com" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
-</div>
-
-
-    <!-- Requirement: Tableau (FIXED FULL LINK) -->
-   <div id="graph-anchor" class="graph-section">
-    <h3>Interactive Market Data</h3>
-    <div class='tableauPlaceholder' style='position: relative; width: 100%; height: 500px;'>
-        <object class='tableauViz' width='100%' height='500' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-            <param name='name' value='RegionalSampleWorkbook&#47;College' />
-            <param name='toolbar' value='yes' />
-        </object>
+        <!-- Requirement: Tableau (The most basic script version) -->
+        <div id="graph-anchor" style="margin-top: 20px;">
+            <h3>Interactive Data</h3>
+            <script type="text/javascript" src="https://tableau.com"></script>
+            <div class="tableauPlaceholder" style="width: 100%; height: 500px;">
+                <object class="tableauViz" width="100%" height="500" style="display:none;">
+                    <param name="host_url" value="https%3A%2F%://tableau.com%2F" />
+                    <param name="name" value="RegionalSampleWorkbook/College" />
+                </object>
+            </div>
+        </div>
+        
+        <p><a href="app.html">Try the AI Game</a></p>
     </div>
-    <!-- This full link is the "engine" that makes the graph appear -->
-    <script type='text/javascript' src='https://tableau.com'></script>
-</div>
-
-    
-    <p style="margin-top: 40px;"><a href="app.html">Next: Try my AI Web App Game!</a></p>
-</div>
-
 </body>
 </html>
