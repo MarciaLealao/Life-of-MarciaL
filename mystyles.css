@@ -1,31 +1,41 @@
 /* Custom Stylesheet */
 body {
-    background-color: #f4f7f6; /* Custom background color */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Custom font family */
-    color: #2c3e50; /* Custom font color */
+    background-color: #f4f7f6 !important; /* Custom soft gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #2c3e50; 
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    /* Removed padding: 20px here so it doesn't break the left-side navigation bar */
 }
 
-.main-container { /* Div 1 for positioning */
-    max-width: 900px;
-    margin: auto;
+/* Div 1 for positioning - Wraps all sections into a neat card */
+.main-container { 
+    max-width: 950px; /* Slightly wider to fit resume content nicely */
+    margin: 40px auto; /* Centers the card and gives top/bottom breathing room */
     background: white;
-    padding: 40px;
+    padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Slightly stronger shadow to pop off background */
 }
 
-.video-section { /* Div 2 for positioning */
-    margin: 30px 0;
+/* Div 2 for positioning - Used in Interests */
+.video-section { 
+    margin: 40px 0 20px 0;
+    text-align: center;
+    background-color: #f8f9fa; /* Light gray box to highlight the video area */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Div 3 for positioning - Used in Skills */
+.graph-section { 
+    margin-top: 50px;
+    border-top: 2px solid #eee;
+    padding-top: 30px;
     text-align: center;
 }
 
-.graph-section { /* Div 3 for positioning */
-    margin-top: 40px;
-    border-top: 2px solid #eee;
-    padding-top: 20px;
+/* Forces the H1 to use your beautiful blue instead of Bootstrap's default */
+h1 { 
+    color: #2980b9 !important; 
 }
-
-h1 { color: #2980b9; }
