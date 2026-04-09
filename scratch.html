@@ -3,82 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Deal Hunter's Den</title>
+  <title>I Love a Good Deal!</title>
   <link rel="stylesheet" href="mystyles.css" />
+  <style>
+    nav { background:#2980b9; padding:12px 20px; margin:-20px -20px 30px; }
+    nav a { color:#fff; text-decoration:none; margin-right:20px; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    h2 { color:#2980b9; border-bottom:1px solid #eee; padding-bottom:6px; }
+    img { max-width:100%; border-radius:6px; margin:16px 0; }
+    ol, ul { line-height:1.9; }
+    #quiz-box { background:#f0f4f8; border:1px solid #ccc; border-radius:8px; padding:24px; margin-top:16px; }
+    #q-text { font-size:1.1rem; font-weight:bold; margin-bottom:16px; }
+    #options { display:flex; flex-direction:column; gap:8px; margin-bottom:14px; }
+    .opt-btn { background:#fff; border:1px solid #2980b9; color:#2c3e50; padding:9px 18px;
+               text-align:left; border-radius:5px; cursor:pointer; font-size:0.97rem; transition:background 0.15s; }
+    .opt-btn:hover:not(:disabled) { background:#d6eaf8; }
+    .opt-btn:disabled { opacity:0.65; cursor:default; }
+    #feedback { font-size:1rem; font-weight:bold; min-height:22px; }
+    #quiz-controls { display:flex; align-items:center; gap:18px; margin-top:16px; }
+    #quiz-controls button { background:#2980b9; color:#fff; border:none; padding:9px 22px;
+                            border-radius:5px; cursor:pointer; font-size:0.95rem; }
+    #quiz-controls button:hover { background:#1a6fa0; }
+    #score-display { color:#2980b9; font-weight:bold; }
+    footer { text-align:center; margin-top:40px; padding:20px; color:#888; font-size:0.9rem; border-top:1px solid #eee; }
+    footer a { color:#2980b9; }
+  </style>
 </head>
 <body>
 
   <nav>
     <a href="index.html">← Back to Portfolio</a>
-    <a href="#video">Video Guide</a>
+    <a href="#about">About</a>
+    <a href="#video-section">Video</a>
     <a href="#tableau">Data Viz</a>
-    <a href="#app">Savings App</a>
+    <a href="#quiz">Quiz</a>
   </nav>
 
   <div class="main-container">
-    <h1>My Passion for a Great Deal!</h1>
-    <p>I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children, and that's when someone introduced me to couponing! I was hooked.</p>
 
-    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=900" alt="Savings and Coupons" />
+    <h1>My Passion for a good deal!</h1>
+    
+    <p id="about">
+      I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children,
+      and that's when someone introduced me to couponing! I was hooked. Over the years, couponing has changed and is done more
+      online. But the rush of getting a good deal is still alive and well!
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=900&q=80"
+         alt="Starry night sky over mountains" />
+
+    <p><a href="#quiz">Jump to the Space Quiz ↓</a></p>
 
     <h2>My Deal Seeking Journey</h2>
     <ol>
-      <li>Purchased my first coupons (age 22)</li>
-      <li>Mastered the "Tricks of the Trade":
+      <li>Purhcased my first coupons (age 22)</li>
+      <li>
+        Started learning the tricks and trades of the couponing world:
         <ul>
-          <li><strong>Stacking:</strong> Combining store and manufacturer coupons.</li>
-          <li><strong>Run Deals:</strong> Extremely short-term, high-value errors or sales.</li>
-          <li><strong>Filler Items:</strong> Small items used to reach a threshold.</li>
+          <li>Dumpster Dive</li>
+          <li>Run Deal</li>
+          <li>4 or more</li>
+          <li>Stacking</li>
         </ul>
       </li>
-      <li>Currently chasing online-only digital stacks.</li>
+      <li>Joined a local couponing club</li>
+      <li>Started following couponing IG and FB pages daily</li>
+      <li>Currently chasing online deals only</li>
     </ol>
 
-    <div class="video-section" id="video">
-      <h2>Learn the "Stacking" Method</h2>
-      <iframe width="100%" height="400" src="https://www.youtube.com/embed/P78_O62-D-A" frameborder="0" allowfullscreen></iframe>
+    <div class="video-section" id="video-section">
+      <h2>My Favorite Space Documentary</h2>
+      <p>This video blew my mind the first time I watched it. Highly recommend giving it a watch.</p>
+      <iframe
+        width="760" height="428"
+        src="https://www.youtube.com/watch?v=uSMGENDH_QI"
+        title="The Scale of the Universe"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
 
     <div class="graph-section" id="tableau">
-      <h2>Consumer Spending Trends</h2>
-      <div class='tableauPlaceholder' id='viz1715800000000' style='position: relative'>
-        <object class='tableauViz' style='display:none;'>
+      <h2>Space Mission Data Visualization</h2>
+      <p>This interactive Tableau chart shows data on space exploration missions over time.
+         Click around, it's really interesting.</p>
+      <div class='tableauPlaceholder' id='viz1775762208219' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpaceMissionDashboard1957-2022&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-          <param name='name' value='ConsumerSpending/Dashboard' />
+          <param name='embed_code_version' value='3' /> 
+          <param name='site_root' value='' />
+          <param name='name' value='SpaceMissionDashboard1957-2022&#47;Dashboard1' />
+          <param name='tabs' value='no' />
           <param name='toolbar' value='yes' />
-          <param name='static_image' value='https://public.tableau.com/static/images/Co/ConsumerSpending/Dashboard/1.png' /> 
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpaceMissionDashboard1957-2022&#47;Dashboard1&#47;1.png' /> 
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
         </object>
+      </div>                
+      <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1775762208219');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1977px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+    </div>
       </div>
-      <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
     </div>
-
-    <div class="graph-section" id="app">
-        <h2>Savings Goal Calculator</h2>
-        <p>If you save this much per week, how long until your next big purchase?</p>
-        <input type="number" id="weekly" placeholder="Weekly Savings ($)">
-        <input type="number" id="goal" placeholder="Savings Goal ($)">
-        <button onclick="calc()">Calculate</button>
-        <p id="res"></p>
-    </div>
-
   </div>
-
   <footer>
     <p>Made by Marcia Lealao | IS 201 | BYU | 2026</p>
+    <a href="index.html">← Back to Portfolio</a>
   </footer>
 
   <script>
-    function calc() {
-      const w = document.getElementById('weekly').value;
-      const g = document.getElementById('goal').value;
-      const r = document.getElementById('res');
-      if(w > 0 && g > 0) {
-        const weeks = Math.ceil(g / w);
-        r.innerHTML = `It will take you <strong>${weeks} weeks</strong> to reach your goal!`;
-      } else {
-        r.innerText = "Please enter valid numbers.";
-      }
-    }
+    
   </script>
 </body>
 </html>
