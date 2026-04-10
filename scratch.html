@@ -6,7 +6,6 @@
   <title>Marcia's Deals</title>
   <link href="mystyles.css" rel="stylesheet" />
   <style>
-    /* This is the styling you liked - all in one place now */
     body { 
         background-color: #f4f7f6; 
         font-family: 'Verdana', sans-serif; 
@@ -14,8 +13,6 @@
         margin: 0; 
         padding: 0; 
     }
-    
-    /* Green Navigation Bar */
     nav { 
         background: #27ae60; 
         padding: 20px; 
@@ -30,8 +27,6 @@
         font-size: 1.1em;
     }
     nav a:hover { text-decoration: underline; }
-
-    /* The Main White Card */
     .main-container { 
         max-width: 900px; 
         margin: 40px auto; 
@@ -39,12 +34,9 @@
         padding: 40px; 
         border-radius: 15px; 
         box-shadow: 0 4px 25px rgba(0,0,0,0.1); 
+        text-align: center;
     }
-
-    /* Green Headers */
-    h1, h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; }
-
-    /* Video Section Styling */
+    h1, h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; text-align: center; }
     .media-block { 
         background: #e8f5e9; 
         padding: 25px; 
@@ -52,8 +44,6 @@
         margin: 30px 0; 
         border-left: 5px solid #27ae60;
     }
-
-    /* Savings App Styling */
     .app-box { 
         border: 2px dashed #27ae60; 
         padding: 30px; 
@@ -62,39 +52,14 @@
         background: #fdfdfd; 
         margin-top: 30px;
     }
-
-    img { width: 100%; border-radius: 10px; margin: 20px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-
+    img { width: 100%; max-width: 400px; border-radius: 10px; margin: 20px auto; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: block; }
     button { 
-        background: #27ae60; 
-        color: white; 
-        border: none; 
-        padding: 12px 25px; 
-        border-radius: 5px; 
-        cursor: pointer; 
-        font-weight: bold;
-        transition: background 0.3s;
+        background: #27ae60; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.3s;
     }
     button:hover { background: #219150; }
-
     input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin: 5px; }
-
     footer { text-align: center; padding: 20px; color: #888; font-size: 0.9em; }
-    /* --- Centering Enhancements --- */
-h1, h2 {
-    text-align: center;
-}
-
-/* Centers the list block but keeps the text inside aligned left for readability */
-ol {
-    display: inline-block;
-    text-align: left;
-}
-
-/* This makes sure the container holding the list behaves like a center-aligned block */
-.main-container {
-    text-align: center;
-}
+    ol { display: inline-block; text-align: left; }
   </style>
 </head>
 <body>
@@ -108,13 +73,9 @@ ol {
 
   <div class="main-container">
     <h1>My Passion for a Great Deal!</h1>
-    <p>I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children, and that's when someone introduced me to couponing! I was hooked.</p>
+    <p>I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children, and that's when someone introduced me to couponing!</p>
 
-    <div style="text-align: center;">
-    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=900" 
-     alt="Couponing Stockpile" 
-     style="width: 400px; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-</div>
+    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=900" alt="Couponing Stockpile">
 
     <h2>My Deal Seeking Journey</h2>
     <ol>
@@ -135,7 +96,6 @@ ol {
         <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
                 src="https://www.youtube.com/embed/P78_O62-D-A" 
                 title="Coupon Stacking Guide" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen></iframe>
       </div>
     </div>
@@ -143,20 +103,18 @@ ol {
     <div id="tableau" style="margin-top: 30px;">
       <h2>Consumer Spending Trends</h2>
       <div class='tableauPlaceholder' id='viz_unique_123' style='position: relative; width: 100%; height: 500px;'>
+        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
         <object class='tableauViz' style='display:none;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
           <param name='name' value='ConsumerSpending/Dashboard' />
-          <param name='static_image' value='https://public.tableau.com/static/images/Co/ConsumerSpending/Dashboard/1.png' /> 
           <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Co/ConsumerSpending/Dashboard/1.png' /> 
         </object>
       </div>
       <script type='text/javascript'>
         var divElement = document.getElementById('viz_unique_123');
         var vizElement = divElement.getElementsByTagName('object')[0];
-        vizElement.style.width='100%';vizElement.style.height='500px';
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        vizElement.style.width='100%'; vizElement.style.height='500px';
       </script>
     </div>
 
