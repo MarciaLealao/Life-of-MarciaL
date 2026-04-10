@@ -8,96 +8,101 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">← Back to Resume</a>
-    <a href="#about">About</a>
-    <a href="#strategy">Strategy</a>
-    <a href="#video">Video</a>
-    <a href="#tableau">Data Viz</a>
-    <a href="app.html">Quiz App</a>
-  </nav>
+<nav>
+  <a href="index.html">← Back to Resume</a>
+  <a href="#about">About</a>
+  <a href="#strategy">Strategy</a>
+  <a href="#video">Video</a>
+  <a href="#tableau">Data Viz</a>
+  <a href="app.html">Quiz App</a>
+</nav>
 
-  <div class="main-container">
-    <header id="about">
-      <h1>I Love a Good Deal!</h1>
-      <p>Couponing is my favorite way to turn everyday shopping into a game of strategy and savings.</p>
+<div class="main-container">
 
-      <img src="coupon.jpg" alt="Cutting coupons on a table" class="coupon-hero" />
-    </header>
+  <header id="about">
+    <h1>I Love a Good Deal!</h1>
+    <p>Couponing is my favorite way to turn everyday shopping into a game of strategy and savings.</p>
+    <img src="coupon.jpg" alt="Cutting coupons on a table" class="coupon-hero" />
+  </header>
 
-    <section id="strategy">
-      <h2>How I Approach Couponing</h2>
-      <p>My process mixes planning, timing, and a little bit of math. Here’s how I break it down:</p>
+  <section id="strategy">
+    <h2>How I Approach Couponing</h2>
+    <p>My process mixes planning, timing, and a little bit of math.</p>
 
-      <ol>
-        <li>Getting Started
-          <ul>
-            <li>Pick one main grocery store to focus on.</li>
-            <li>Download that store’s app and enable digital coupons.</li>
-            <li>Start with just a few items you buy every week.</li>
-          </ul>
-        </li>
-        <li>Leveling Up
-          <ul>
-            <li>Stack store sales with manufacturer coupons.</li>
-            <li>Use cashback apps to double-dip on savings.</li>
-            <li>Track prices so you know when a deal is truly good.</li>
-          </ul>
-        </li>
-        <li>Going Pro
-          <ul>
-            <li>Build a small stockpile of non-perishables.</li>
-            <li>Plan meals around what’s on sale.</li>
-            <li>Share extra deals with friends and family.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
+    <ol>
+      <li>Getting Started
+        <ul>
+          <li>Pick one main grocery store</li>
+          <li>Enable digital coupons</li>
+          <li>Start with weekly essentials</li>
+        </ul>
+      </li>
+      <li>Leveling Up
+        <ul>
+          <li>Stack sales and coupons</li>
+          <li>Use cashback apps</li>
+          <li>Track prices</li>
+        </ul>
+      </li>
+      <li>Going Pro
+        <ul>
+          <li>Build a stockpile</li>
+          <li>Plan meals around deals</li>
+          <li>Share savings</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
 
-    <section id="video" class="video-section">
-      <h2>Couponing in Action</h2>
-      <p>Here’s a video that explains how stacking coupons and sales can dramatically cut your bill.</p>
+  <section id="video" class="video-section">
+    <h2>Couponing in Action</h2>
+    <p>This video explains how stacking coupons and sales can dramatically cut your bill.</p>
 
-      <div style="max-width: 700px; margin: 0 auto;">
-        <iframe width="560" height="315"
-  src="https://www.youtube.com/embed/3C9wZfFzN88"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-      </div>
-    </section>
+    <div style="max-width:700px;margin:0 auto;">
+      <iframe
+        src="https://www.youtube.com/embed/3C9wZfFzN88"
+        title="Couponing video"
+        width="100%"
+        height="350"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-   <section id="tableau" class="graph-section">
-  <h2>Tracking Savings Over Time</h2>
-  <p><i>This visualization illustrates how consistent couponing and strategic shopping can reduce grocery expenses over time.</i></p>
+  <section id="tableau" class="graph-section">
+    <h2>Tracking Coupon Savings Over Time</h2>
+    <p><i>This Tableau visualization shows trends in coupon usage and savings.</i></p>
 
-  <div class="tableauPlaceholder" id="couponViz" style="position: relative;">
-    <object class="tableauViz" style="display:none;">
-      <param name="host_url" value="https://public.tableau.com/" />
-      <param name="embed_code_version" value="3" />
-      <param name="site_root" value="" />
-      <param name="name" value="RegionalSampleWorkbook/Storms" />
-      <param name="tabs" value="no" />
-      <param name="toolbar" value="yes" />
-    </object>
-  </div>
+    <div class="tableauPlaceholder" id="couponViz" style="position:relative;">
+      <object class="tableauViz" style="display:none;">
+        <param name="host_url" value="https://public.tableau.com/" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="CouponTrendsReport/COUPOPNTRENDREPORT" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+      </object>
+    </div>
 
-  <script type="text/javascript">
-    var divElement = document.getElementById("couponViz");
-    var vizElement = divElement.getElementsByTagName("object")[0];
-    vizElement.style.width = "100%";
-    vizElement.style.height = "600px";
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  </script>
-</section>
+    <script type="text/javascript">
+      var divElement = document.getElementById("couponViz");
+      var vizElement = divElement.getElementsByTagName("object")[0];
+      vizElement.style.width = "100%";
+      vizElement.style.height = "600px";
+      var scriptElement = document.createElement("script");
+      scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+  </section>
 
-    <footer style="text-align:center; margin-top:40px; font-size:0.9rem; color:#777;">
-      <p>Back to my <a href="index.html">professional resume</a> or try my <a href="app.html">couponing quiz app</a>.</p>
-    </footer>
-  </div>
+  <footer style="text-align:center;margin-top:40px;font-size:0.9rem;color:#777;">
+    <p>
+      Back to my <a href="index.html">professional resume</a>
+      or try my <a href="app.html">couponing quiz app</a>.
+    </p>
+  </footer>
+
+</div>
 </body>
 </html>
