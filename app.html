@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couponing Quiz App</title>
+  <style>
+    body {
+      background-color: #f4f7f6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2c3e50;
+      margin: 0;
+      padding: 40px 10px;
+    }
+
+    .app-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2980b9;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    #quiz-box {
+      background:#f0f4f8;
+      border:1px solid #ccc;
+      border-radius:8px;
+      padding:24px;
+      margin-top:16px;
+    }
+
+    #q-text {
+      font-size:1.1rem;
+      font-weight:bold;
+      margin-bottom:16px;
+    }
+
+    #options {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-bottom:14px;
+    }
+
+    .opt-btn {
+      background:#fff;
+      border:1px solid #2980b9;
+      color:#2c3e50;
+      padding:9px 18px;
+      text-align:left;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:0.97rem;
+      transition:background 0.15s;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      background:#d6eaf8;
+    }
+
+    .opt-btn:disabled {
+      opacity:0.65;
+      cursor:default;
+    }
+
+    #feedback {
+      font-size:1rem;
+      font-weight:bold;
+      min-height:22px;
+    }
+
+    #quiz-controls {
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-top:16px;
+    }
+
+    #quiz-controls button {
+      background:#2980b9;
+      color:#fff;
+      border:none;
+      padding:9px 22px;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:0.95rem;
+    }
+
+    #quiz-controls button:hover {
+      background:#1a6fa0;
+    }
+
+    #score-display {
+      color:#2980b9;
+      font-weight:bold;
+    }
+
+    .nav-links {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .nav-links a {
+      color:#2980b9;
+      text-decoration:none;
+      font-weight:bold;
+      margin: 0 10px;
+    }
+
+    .nav-links a:hover {
+      text-decoration:underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <h1>Couponing Quiz App</h1>
+    <p class="subtitle">Test your couponing knowledge and see how savvy you really are.</p>
+
+    <div id="quiz-box">
+      <div id="q-text">Loading question...</div>
+      <div id="options"></div>
+      <div id="feedback"></div>
+
+      <div id="quiz-controls">
+        <button id="next-btn">Next</button>
+        <span id="score-display"></span>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="scratch.html">← Back to Hobby Page</a>
+      <a href="index.html">Go to Resume</a>
+    </div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        q: "What is coupon stacking?",
+        options: [
+          "Using multiple discounts on the same purchase",
+          "Saving coupons in a stack for later",
+          "Using expired coupons",
+          "Only using paper coupons"
+        ],
+        answer: 0
+      },
+      {
+        q: "Which of these helps you save the MOST?",
+        options: [
+          "Buying only name brands at full price",
+          "Combining store sales, coupons, and cashback",
+          "Shopping without a list",
+          "Ignoring weekly ads"
+        ],
+        answer: 1
+      },
+      {
+        q: "What’s a smart way to start couponing?",
+        options: [
+          "Trying to coupon at five stores at once",
+          "Starting with one store and a few key items",
+          "Only clipping random coupons",
+          "Buying things just because you have a coupon"
+        ],
+        answer: 1
+      },
+      {
+        q: "When is the best time to stock up?",
+        options: [
+          "When items are full price",
+          "During a sale with coupons and/or cashback",
+          "Whenever you feel like it",
+          "Only on weekends"
+        ],
+        answer: 1
+      }
+    ];
+
+    let index = 0;
+    let score = 0;
+
+    const qText = document.getElementById("q-text");
+    const optionsDiv = document.getElementById("options");
+    const feedback = document.getElementById("feedback");
+    const nextBtn = document.getElementById("next-btn");
+    const scoreDisplay = document.getElementById("score-display");
+
+    function loadQuestion() {
+      const current = quizData[index];
+      qText.textContent = current.q;
+      optionsDiv.innerHTML = "";
+      feedback.textContent = "";
+
+      current.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.className = "opt-btn";
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(i);
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      const correct = quizData[index].answer;
+      const buttons = document.querySelectorAll(".opt-btn");
+
+      buttons.forEach(b => b.disabled = true);
+
+      if (selected === correct) {
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+        score++;
+      } else {
+        feedback.textContent = "Not quite. Keep going!";
+        feedback.style.color = "red";
+      }
+
+      scoreDisplay.textContent = `Score: ${score}/${quizData.length}`;
+    }
+
+    nextBtn.onclick = () => {
+      index++;
+      if (index < quizData.length) {
+        loadQuestion();
+      } else {
+        qText.textContent = "Quiz complete!";
+        optionsDiv.innerHTML = "";
+        feedback.textContent = `Final score: ${score}/${quizData.length}`;
+        feedback.style.color = "#2980b9";
+        nextBtn.disabled = true;
+      }
+    };
+
+    loadQuestion();
+  </script>
+</body>
+</html>
