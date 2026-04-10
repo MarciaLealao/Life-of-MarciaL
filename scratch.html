@@ -3,274 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I Love a Good Deal!</title>
+  <title>Couponing Hobby Page</title>
   <link rel="stylesheet" href="mystyles.css" />
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background:#fafafa;
-      color:#2c3e50;
-    }
-
-    nav {
-      background:#2980b9;
-      padding:12px 20px;
-      margin:-20px -20px 30px;
-    }
-    nav a {
-      color:#fff;
-      text-decoration:none;
-      margin-right:20px;
-      font-weight:bold;
-    }
-    nav a:hover { text-decoration:underline; }
-
-    h1, h2 { color:#2980b9; }
-    h2 { border-bottom:1px solid #eee; padding-bottom:6px; }
-
-    img { max-width:100%; border-radius:6px; margin:16px 0; }
-
-    section { margin-bottom:40px; }
-
-    /* Quiz Styles */
-    #quiz-box {
-      background:#f0f4f8;
-      border:1px solid #ccc;
-      border-radius:8px;
-      padding:24px;
-      margin-top:16px;
-    }
-    #q-text {
-      font-size:1.1rem;
-      font-weight:bold;
-      margin-bottom:16px;
-    }
-    #options {
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      margin-bottom:14px;
-    }
-    .opt-btn {
-      background:#fff;
-      border:1px solid #2980b9;
-      color:#2c3e50;
-      padding:9px 18px;
-      text-align:left;
-      border-radius:5px;
-      cursor:pointer;
-      font-size:0.97rem;
-      transition:background 0.15s;
-    }
-    .opt-btn:hover:not(:disabled) { background:#d6eaf8; }
-    .opt-btn:disabled { opacity:0.65; cursor:default; }
-
-    #feedback { font-size:1rem; font-weight:bold; min-height:22px; }
-
-    #quiz-controls {
-      display:flex;
-      align-items:center;
-      gap:18px;
-      margin-top:16px;
-    }
-    #quiz-controls button {
-      background:#2980b9;
-      color:#fff;
-      border:none;
-      padding:9px 22px;
-      border-radius:5px;
-      cursor:pointer;
-      font-size:0.95rem;
-    }
-    #quiz-controls button:hover { background:#1a6fa0; }
-
-    #score-display { color:#2980b9; font-weight:bold; }
-
-    footer {
-      text-align:center;
-      margin-top:40px;
-      padding:20px;
-      color:#888;
-      font-size:0.9rem;
-      border-top:1px solid #eee;
-    }
-    footer a { color:#2980b9; }
-  </style>
 </head>
-
 <body>
 
+  <!-- Top nav back to professional pages + app link -->
   <nav>
-    <a href="index.html">← Back to Portfolio</a>
+    <a href="index.html">← Back to Resume</a>
     <a href="#about">About</a>
-    <a href="#app">App</a>
-    <a href="#video-section">Video</a>
-    <a href="#quiz">Quiz</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#video">Video</a>
+    <a href="#tableau">Data Viz</a>
+    <a href="app.html">Quiz App</a>
   </nav>
 
-  <header>
-    <h1>I Love a Good Deal!</h1>
-    <p>Welcome to my couponing page — where saving money becomes a lifestyle.</p>
-    <img src="https://images.unsplash.com/photo-1581091012184-5c7b1b3c1c5f" alt="Couponing hero image">
-  </header>
+  <div class="main-container">
+    <header id="about">
+      <h1>I Love a Good Deal!</h1>
+      <p>Couponing is my favorite way to turn everyday shopping into a game of strategy and savings.</p>
+      <!-- Non-Bootstrap image -->
+      <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=80" 
+           alt="Coupons and shopping list on a table">
+    </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About Couponing</h2>
-    <p>
-      Couponing is more than clipping paper squares — it’s a smart strategy for stretching your budget.
-      Whether you're saving a few dollars or stacking deals for huge discounts, couponing helps you take
-      control of your spending and make every purchase count.
-    </p>
-    <ul>
-      <li>Stack store + manufacturer coupons</li>
-      <li>Use cashback apps</li>
-      <li>Track weekly ads</li>
-      <li>Stock up during sales cycles</li>
-    </ul>
-  </section>
+    <section id="strategy">
+      <h2>How I Approach Couponing</h2>
+      <p>My process mixes planning, timing, and a little bit of math. Here’s how I break it down:</p>
 
-  <!-- APP SECTION -->
-  <section id="app">
-    <h2>My Favorite Couponing App</h2>
-    <p>
-      Apps make couponing easier than ever. Here’s a mockup of a simple couponing app interface:
-    </p>
+      <!-- Ordered list with embedded unordered list (requirement) -->
+      <ol>
+        <li>Getting Started
+          <ul>
+            <li>Pick one main grocery store to focus on.</li>
+            <li>Download that store’s app and enable digital coupons.</li>
+            <li>Start with just a few items you buy every week.</li>
+          </ul>
+        </li>
+        <li>Leveling Up
+          <ul>
+            <li>Stack store sales with manufacturer coupons.</li>
+            <li>Use cashback apps to double-dip on savings.</li>
+            <li>Track prices so you know when a deal is truly good.</li>
+          </ul>
+        </li>
+        <li>Going Pro
+          <ul>
+            <li>Build a small stockpile of non-perishables.</li>
+            <li>Plan meals around what’s on sale.</li>
+            <li>Share extra deals with friends and family.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-    <img src="https://images.unsplash.com/photo-1607082349566-187a5b1d5a2d" alt="Couponing app mockup">
-
-    <p>
-      This type of app helps you:
-    </p>
-    <ol>
-      <li>Track digital coupons</li>
-      <li>Compare store prices</li>
-      <li>Save your favorite deals</li>
-      <li>Get alerts when items go on sale</li>
-    </ol>
-  </section>
-
-  <!-- VIDEO SECTION -->
-  <section id="video-section">
-    <h2>Couponing Video Guide</h2>
-    <p>Here’s a helpful video that explains coupon stacking and maximizing savings.</p>
-
-    <iframe width="100%" height="350"
-      src="https://www.youtube.com/embed/3C9wZfFzN88"
-      title="Couponing video"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </section>
-
-  <!-- QUIZ SECTION -->
-  <section id="quiz">
-    <h2>Test Your Couponing Knowledge</h2>
-
-    <div id="quiz-box">
-      <div id="q-text">Loading question...</div>
-      <div id="options"></div>
-      <div id="feedback"></div>
-
-      <div id="quiz-controls">
-        <button id="next-btn">Next</button>
-        <span id="score-display"></span>
+    <!-- YouTube video section -->
+    <section id="video" class="video-section">
+      <h2>Couponing in Action</h2>
+      <p>Here’s a video that explains how stacking coupons and sales can dramatically cut your bill.</p>
+      <div style="max-width: 700px; margin: 0 auto;">
+        <iframe width="100%" height="390"
+          src="https://www.youtube.com/embed/3C9wZfFzN88"
+          title="Couponing Tips"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    © 2026 Couponing Portfolio Page • <a href="index.html">Return Home</a>
-  </footer>
+    <!-- Tableau embed section -->
+    <section id="tableau" class="graph-section">
+      <h2>Coupon Savings Visualization</h2>
+      <p><i>This live Tableau visualization shows how savings can add up over time.</i></p>
 
-  <!-- QUIZ SCRIPT -->
-  <script>
-    const quizData = [
-      {
-        q: "What is coupon stacking?",
-        options: [
-          "Using multiple coupons on one item",
-          "Saving coupons for later",
-          "Cutting coupons neatly",
-          "Using expired coupons"
-        ],
-        answer: 0
-      },
-      {
-        q: "Which app is commonly used for cashback?",
-        options: ["WeatherPro", "Ibotta", "Spotify", "Maps+"],
-        answer: 1
-      },
-      {
-        q: "When is the best time to stock up?",
-        options: [
-          "When items are full price",
-          "During seasonal sales",
-          "When you feel like it",
-          "Only on weekends"
-        ],
-        answer: 1
-      }
-    ];
+      <!-- Replace this embed with any public Tableau viz you choose -->
+      <div class="tableauPlaceholder" id="viz1680000000000" style="position: relative; margin: 0 auto; max-width: 900px;">
+        <noscript>
+          <a href="#">
+            <img src="https://public.tableau.com/static/images/Sa/SampleSuperstore_1045/Overview/1_rss.png" alt="Tableau Visualization" />
+          </a>
+        </noscript>
+        <object class="tableauViz" style="display:none;">
+          <param name="host_url" value="https://public.tableau.com/" />
+          <param name="embed_code_version" value="3" />
+          <param name="site_root" value="" />
+          <param name="name" value="SampleSuperstore_1045/Overview" />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+          <param name="animate_transition" value="yes" />
+          <param name="display_static_image" value="yes" />
+          <param name="display_spinner" value="yes" />
+          <param name="display_overlay" value="yes" />
+          <param name="display_count" value="yes" />
+        </object>
+      </div>
+      <script type="text/javascript">
+        var divElement = document.getElementById('viz1680000000000');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = '600px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </section>
 
-    let index = 0;
-    let score = 0;
-
-    const qText = document.getElementById("q-text");
-    const optionsDiv = document.getElementById("options");
-    const feedback = document.getElementById("feedback");
-    const nextBtn = document.getElementById("next-btn");
-    const scoreDisplay = document.getElementById("score-display");
-
-    function loadQuestion() {
-      const current = quizData[index];
-      qText.textContent = current.q;
-      optionsDiv.innerHTML = "";
-      feedback.textContent = "";
-
-      current.options.forEach((opt, i) => {
-        const btn = document.createElement("button");
-        btn.className = "opt-btn";
-        btn.textContent = opt;
-        btn.onclick = () => checkAnswer(i);
-        optionsDiv.appendChild(btn);
-      });
-    }
-
-    function checkAnswer(selected) {
-      const correct = quizData[index].answer;
-      const buttons = document.querySelectorAll(".opt-btn");
-
-      buttons.forEach(b => b.disabled = true);
-
-      if (selected === correct) {
-        feedback.textContent = "Correct!";
-        feedback.style.color = "green";
-        score++;
-      } else {
-        feedback.textContent = "Incorrect.";
-        feedback.style.color = "red";
-      }
-
-      scoreDisplay.textContent = `Score: ${score}/${quizData.length}`;
-    }
-
-    nextBtn.onclick = () => {
-      index++;
-      if (index < quizData.length) {
-        loadQuestion();
-      } else {
-        qText.textContent = "Quiz complete!";
-        optionsDiv.innerHTML = "";
-        feedback.textContent = "";
-        nextBtn.disabled = true;
-      }
-    };
-
-    loadQuestion();
-  </script>
-
+    <footer style="text-align:center; margin-top:40px; font-size:0.9rem; color:#777;">
+      <p>Back to my <a href="index.html">professional resume</a> or try my <a href="app.html">couponing quiz app</a>.</p>
+    </footer>
+  </div>
 </body>
 </html>
