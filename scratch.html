@@ -131,39 +131,34 @@ ol {
 
     <div class="media-block" id="video">
       <h2>Learn the "Stacking" Method</h2>
-      <iframe width="100%" height="400" src="https://www.youtube.com/embed/P78_O62-D-A" title="Coupon Stacking Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                src="https://www.youtube.com/embed/P78_O62-D-A" 
+                title="Coupon Stacking Guide" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+      </div>
     </div>
-    <div id="tableau" style="margin-top: 30px; min-height: 500px;">
-  <h2>Consumer Spending Trends</h2>
-  <div class='tableauPlaceholder' id='viz1715832000000' style='position: relative; width: 100%; height: 500px;'>
-    <noscript>
-      <a href='#'><img alt='Consumer Spending Dashboard' src='https://public.tableau.com/static/images/Co/ConsumerSpending/Dashboard/1.png' style='border: none' /></a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-      <param name='embed_code_version' value='3' /> 
-      <param name='site_root' value='' />
-      <param name='name' value='ConsumerSpending/Dashboard' />
-      <param name='tabs' value='no' />
-      <param name='toolbar' value='yes' />
-      <param name='static_image' value='https://public.tableau.com/static/images/Co/ConsumerSpending/Dashboard/1.png' /> 
-      <param name='animate_transition' value='yes' />
-      <param name='display_static_image' value='yes' />
-      <param name='display_spinner' value='yes' />
-      <param name='display_overlay' value='yes' />
-      <param name='display_count' value='yes' />
-      <param name='language' value='en-US' />
-    </object>
-  </div>
-  <script type='text/javascript'>
-    var divElement = document.getElementById('viz1715832000000');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    vizElement.style.width='100%';vizElement.style.height='500px';
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  </script>
-</div>
+
+    <div id="tableau" style="margin-top: 30px;">
+      <h2>Consumer Spending Trends</h2>
+      <div class='tableauPlaceholder' id='viz_unique_123' style='position: relative; width: 100%; height: 500px;'>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='name' value='ConsumerSpending/Dashboard' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Co/ConsumerSpending/Dashboard/1.png' /> 
+          <param name='toolbar' value='yes' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz_unique_123');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';vizElement.style.height='500px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div>
 
     <div class="app-box" id="app">
         <h2>Savings Goal Calculator</h2>
