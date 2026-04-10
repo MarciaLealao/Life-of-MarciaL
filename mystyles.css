@@ -1,34 +1,30 @@
-/* Custom Stylesheet */
+/* Custom Stylesheet for Resume */
 body {
-    background-color: #f4f7f6 !important; /* Custom soft gray background */
+    background-color: #f4f7f6 !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     color: #2c3e50; 
     line-height: 1.6;
     margin: 0;
     padding-top: 100px;
-    /* Removed padding: 20px here so it doesn't break the left-side navigation bar */
 }
 
-/* Div 1 for positioning - Wraps all sections into a neat card */
 .main-container { 
-    max-width: 950px; /* Slightly wider to fit resume content nicely */
-    margin: 0 auto 40px auto; /* Centers the card and gives bottom breathing room */
+    max-width: 950px; 
+    margin: 0 auto 40px auto; 
     background: white;
     padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Slightly stronger shadow to pop off background */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Div 2 for positioning - Used in Interests */
 .video-section { 
     margin: 40px 0 20px 0;
     text-align: center;
-    background-color: #f8f9fa; /* Light gray box to highlight the video area */
+    background-color: #f8f9fa; 
     padding: 20px;
     border-radius: 8px;
 }
 
-/* Div 3 for positioning - Used in Skills */
 .graph-section { 
     margin-top: 50px;
     border-top: 2px solid #eee;
@@ -36,62 +32,39 @@ body {
     text-align: center;
 }
 
-/* Forces the H1 to use your beautiful blue instead of Bootstrap's default */
-h1 { 
-    color: #2980b9 !important; 
-}
+h1 { color: #2980b9 !important; }
 
-/* --- Custom Rectangular Menu Styling --- */
-
-/* Style the main sidebar background */
 #sideNav {
-    background-color: #1a252f !important; /* Menu background color */
+    background-color: #1a252f !important; 
     padding: 15px 0;
     width: 100%;
 }
 
-/* Ensure the list takes up the full width of the sidebar */
 .navbar-nav {
-    list-style: none !important; /* Removes bullet points */
+    list-style: none !important; 
     display: flex !important;
-    flex-direction: row !important; /* Forces side by side */
+    flex-direction: row !important; 
     justify-content: center;
     align-items: center;
     width: 100%;
     margin: 0;
     padding: 0;
     gap: 15px; 
-    overflow-x: auto; /* Allows scrolling if menu is too long on small screens */
 }
 
-/* Space out the items slightly */
-.nav-item {
-    list-style: none !important; /* Extra override to remove bullet points */
-    width: auto; 
-    margin-bottom: 0;
-}
-
-/* Turn the plain links into thick, rectangular blocks */
 .nav-link {
     display: block;
-    background-color: #34495e; /* Default dark rectangular button */
+    background-color: #34495e; 
     color: #ffffff !important;
     padding: 12px 24px !important;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    border-radius: 4px; /* Optional: gives the rectangles a slightly soft edge */
+    border-radius: 4px; 
     transition: all 0.3s ease-in-out;
-    white-space: nowrap; /* Prevents text inside buttons from wrapping */
 }
 
-/* Change color when the mouse hovers over the rectangle */
 .nav-link:hover {
-    background-color: #2980b9 !important; /* Bright blue hover effect */
-    transform: translateY(-3px); /* Creates a cool sliding effect upwards for horizontal layout */
-}
-/* Only applies if the page isn't using the fixed Bootstrap nav */
-.main-container {
-    margin-top: 20px; 
+    background-color: #2980b9 !important; 
+    transform: translateY(-3px); 
 }
