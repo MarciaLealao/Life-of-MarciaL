@@ -4,42 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcia's Hobby Page</title>
-    <link href="mystyles.css" rel="stylesheet" />
     <style>
-        body { background-color: #f4f7f6; font-family: 'Verdana', sans-serif; color: #333; margin: 0; }
+        body { background-color: #f4f7f6; font-family: 'Verdana', sans-serif; color: #333; margin: 0; padding: 0; }
         nav { background: #27ae60; padding: 20px; text-align: center; }
         nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; }
-        .main-container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); text-align: center; }
+        .main-container { max-width: 850px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; }
         h1, h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; }
-        .media-block { background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 30px 0; border-left: 5px solid #27ae60; }
-        .app-box { border: 2px dashed #27ae60; padding: 30px; text-align: center; border-radius: 15px; background: #fdfdfd; margin-top: 30px; }
-        ol { display: inline-block; text-align: left; }
-        button { background: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 10px; }
-        input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin: 5px; width: 200px; }
+        .media-block { background: #e8f5e9; padding: 20px; border-radius: 12px; margin: 30px 0; }
+        .app-box { border: 2px dashed #27ae60; padding: 25px; border-radius: 15px; background: #fdfdfd; margin-top: 30px; }
+        button { background: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        input { padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin: 5px; width: 180px; }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html">← Back to Resume</a>
-        <a href="#video">Video Guide</a>
+        <a href="#video">Video</a>
         <a href="#tableau">Data Viz</a>
         <a href="#app">Savings App</a>
     </nav>
-
     <div class="main-container">
         <h1>My Passion for a Great Deal!</h1>
         <p>I learned the rush of a good deal as a young mother through couponing.</p>
         
-        <ol>
-            <li>Purchased my first coupons</li>
-            <li>Mastered "Tricks of the Trade":
-                <ul>
-                    <li><strong>Stacking:</strong> Multiple coupons together.</li>
-                    <li><strong>Run Deals:</strong> High-value sales.</li>
-                </ul>
-            </li>
-        </ol>
-
         <div class="media-block" id="video">
             <h2>Learn the Method</h2>
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -52,30 +39,25 @@
         <div id="tableau" style="margin-top: 30px;">
             <h2>Consumer Spending Trends</h2>
             <iframe src="https://public.tableau.com/views/ConsumerSpending/Dashboard?:showVizHome=no&:embed=true" 
-                    width="100%" height="550px" frameborder="0"></iframe>
+                    width="100%" height="500px" frameborder="0"></iframe>
         </div>
 
         <div class="app-box" id="app">
             <h2>Savings Goal Calculator</h2>
-            <p>Enter your info to see how fast you'll hit your goal!</p>
             <input type="number" id="weekly" placeholder="Weekly Savings ($)">
             <input type="number" id="goal" placeholder="Savings Goal ($)">
-            <br>
-            <button onclick="calc()">Calculate My Goal</button>
-            <p id="res" style="margin-top: 15px; font-size: 1.2em; color: #27ae60; font-weight: bold;"></p>
+            <br><br>
+            <button onclick="calc()">Calculate Goal</button>
+            <p id="res" style="margin-top: 15px; font-weight: bold; color: #27ae60;"></p>
         </div>
     </div>
-
     <script>
         function calc() {
             const w = document.getElementById('weekly').value;
             const g = document.getElementById('goal').value;
             const r = document.getElementById('res');
             if(w > 0 && g > 0) {
-                const weeks = Math.ceil(g / w);
-                r.innerHTML = `It will take you about ${weeks} weeks to reach your goal!`;
-            } else {
-                r.innerText = "Please enter valid numbers.";
+                r.innerHTML = `It will take you about ${Math.ceil(g / w)} weeks to reach your goal!`;
             }
         }
     </script>
