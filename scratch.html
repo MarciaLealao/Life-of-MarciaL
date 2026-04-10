@@ -5,130 +5,272 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I Love a Good Deal!</title>
   <link rel="stylesheet" href="mystyles.css" />
+
   <style>
-    nav { background:#2980b9; padding:12px 20px; margin:-20px -20px 30px; }
-    nav a { color:#fff; text-decoration:none; margin-right:20px; font-weight:bold; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background:#fafafa;
+      color:#2c3e50;
+    }
+
+    nav {
+      background:#2980b9;
+      padding:12px 20px;
+      margin:-20px -20px 30px;
+    }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      margin-right:20px;
+      font-weight:bold;
+    }
     nav a:hover { text-decoration:underline; }
-    h2 { color:#2980b9; border-bottom:1px solid #eee; padding-bottom:6px; }
+
+    h1, h2 { color:#2980b9; }
+    h2 { border-bottom:1px solid #eee; padding-bottom:6px; }
+
     img { max-width:100%; border-radius:6px; margin:16px 0; }
-    ol, ul { line-height:1.9; }
-    #quiz-box { background:#f0f4f8; border:1px solid #ccc; border-radius:8px; padding:24px; margin-top:16px; }
-    #q-text { font-size:1.1rem; font-weight:bold; margin-bottom:16px; }
-    #options { display:flex; flex-direction:column; gap:8px; margin-bottom:14px; }
-    .opt-btn { background:#fff; border:1px solid #2980b9; color:#2c3e50; padding:9px 18px;
-               text-align:left; border-radius:5px; cursor:pointer; font-size:0.97rem; transition:background 0.15s; }
+
+    section { margin-bottom:40px; }
+
+    /* Quiz Styles */
+    #quiz-box {
+      background:#f0f4f8;
+      border:1px solid #ccc;
+      border-radius:8px;
+      padding:24px;
+      margin-top:16px;
+    }
+    #q-text {
+      font-size:1.1rem;
+      font-weight:bold;
+      margin-bottom:16px;
+    }
+    #options {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-bottom:14px;
+    }
+    .opt-btn {
+      background:#fff;
+      border:1px solid #2980b9;
+      color:#2c3e50;
+      padding:9px 18px;
+      text-align:left;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:0.97rem;
+      transition:background 0.15s;
+    }
     .opt-btn:hover:not(:disabled) { background:#d6eaf8; }
     .opt-btn:disabled { opacity:0.65; cursor:default; }
+
     #feedback { font-size:1rem; font-weight:bold; min-height:22px; }
-    #quiz-controls { display:flex; align-items:center; gap:18px; margin-top:16px; }
-    #quiz-controls button { background:#2980b9; color:#fff; border:none; padding:9px 22px;
-                            border-radius:5px; cursor:pointer; font-size:0.95rem; }
+
+    #quiz-controls {
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-top:16px;
+    }
+    #quiz-controls button {
+      background:#2980b9;
+      color:#fff;
+      border:none;
+      padding:9px 22px;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:0.95rem;
+    }
     #quiz-controls button:hover { background:#1a6fa0; }
+
     #score-display { color:#2980b9; font-weight:bold; }
-    footer { text-align:center; margin-top:40px; padding:20px; color:#888; font-size:0.9rem; border-top:1px solid #eee; }
+
+    footer {
+      text-align:center;
+      margin-top:40px;
+      padding:20px;
+      color:#888;
+      font-size:0.9rem;
+      border-top:1px solid #eee;
+    }
     footer a { color:#2980b9; }
   </style>
 </head>
+
 <body>
 
   <nav>
     <a href="index.html">← Back to Portfolio</a>
     <a href="#about">About</a>
+    <a href="#app">App</a>
     <a href="#video-section">Video</a>
-    <a href="#tableau">Data Viz</a>
     <a href="#quiz">Quiz</a>
   </nav>
 
-  <div class="main-container">
+  <header>
+    <h1>I Love a Good Deal!</h1>
+    <p>Welcome to my couponing page — where saving money becomes a lifestyle.</p>
+    <img src="https://images.unsplash.com/photo-1581091012184-5c7b1b3c1c5f" alt="Couponing hero image">
+  </header>
 
-    <h1>My Passion for a good deal!</h1>
-    
-    <p id="about">
-      I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children,
-      and that's when someone introduced me to couponing! I was hooked. Over the years, couponing has changed and is done more
-      online. But the rush of getting a good deal is still alive and well!
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Couponing</h2>
+    <p>
+      Couponing is more than clipping paper squares — it’s a smart strategy for stretching your budget.
+      Whether you're saving a few dollars or stacking deals for huge discounts, couponing helps you take
+      control of your spending and make every purchase count.
+    </p>
+    <ul>
+      <li>Stack store + manufacturer coupons</li>
+      <li>Use cashback apps</li>
+      <li>Track weekly ads</li>
+      <li>Stock up during sales cycles</li>
+    </ul>
+  </section>
+
+  <!-- APP SECTION -->
+  <section id="app">
+    <h2>My Favorite Couponing App</h2>
+    <p>
+      Apps make couponing easier than ever. Here’s a mockup of a simple couponing app interface:
     </p>
 
-    <img src="https://media.istockphoto.com/id/1502566908/vector/scissors-cut-the-coupon-concept-of-free-promotion-label-for-loyalty-program-or-closeout-sale.jpg?s=612x612&w=0&k=20&c=gI7qcHYleTN8_Jorf7M4uU_Prz1s42iYoS6rAsSAl78="
-         alt="Coupon" />
+    <img src="https://images.unsplash.com/photo-1607082349566-187a5b1d5a2d" alt="Couponing app mockup">
 
-    <p><a href="#quiz">Jump to the Space Quiz ↓</a></p>
-
-    <h2>My Deal Seeking Journey</h2>
+    <p>
+      This type of app helps you:
+    </p>
     <ol>
-      <li>Purhcased my first coupons (age 22)</li>
-      <li>
-        Started learning the tricks and trades of the couponing world:
-        <ul>
-          <li>Dumpster Dive</li>
-          <li>Run Deal</li>
-          <li>4 or more</li>
-          <li>Stacking</li>
-        </ul>
-      </li>
-      <li>Joined a local couponing club</li>
-      <li>Started following couponing IG and FB pages daily</li>
-      <li>Currently chasing online deals only</li>
+      <li>Track digital coupons</li>
+      <li>Compare store prices</li>
+      <li>Save your favorite deals</li>
+      <li>Get alerts when items go on sale</li>
     </ol>
+  </section>
 
-    <div class="video-section" id="video-section">
-      <h2>My Favorite Space Documentary</h2>
-      <p>This video blew my mind the first time I watched it. Highly recommend giving it a watch.</p>
-      <iframe
-        width="760" height="428"
-        src="https://www.youtube.com/watch?v=uSMGENDH_QI"
-        title="The Scale of the Universe"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
+  <!-- VIDEO SECTION -->
+  <section id="video-section">
+    <h2>Couponing Video Guide</h2>
+    <p>Here’s a helpful video that explains coupon stacking and maximizing savings.</p>
 
-    <div class="graph-section" id="tableau">
-      <h2>Space Mission Data Visualization</h2>
-      <p>This interactive Tableau chart shows data on space exploration missions over time.
-         Click around, it's really interesting.</p>
-      <div class='tableauPlaceholder' id='viz1775762208219' style='position: relative'>
-        <noscript>
-          <a href='#'>
-            <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpaceMissionDashboard1957-2022&#47;Dashboard1&#47;1_rss.png' style='border: none' />
-          </a>
-        </noscript>
-        <object class='tableauViz'  style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-          <param name='embed_code_version' value='3' /> 
-          <param name='site_root' value='' />
-          <param name='name' value='SpaceMissionDashboard1957-2022&#47;Dashboard1' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpaceMissionDashboard1957-2022&#47;Dashboard1&#47;1.png' /> 
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
-          <param name='language' value='en-US' />
-        </object>
-      </div>                
-      <script type='text/javascript'>                    
-        var divElement = document.getElementById('viz1775762208219');                    
-        var vizElement = divElement.getElementsByTagName('object')[0];                    
-        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1977px';}                     
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-      </script>
-    </div>
+    <iframe width="100%" height="350"
+      src="https://www.youtube.com/embed/3C9wZfFzN88"
+      title="Couponing video"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- QUIZ SECTION -->
+  <section id="quiz">
+    <h2>Test Your Couponing Knowledge</h2>
+
+    <div id="quiz-box">
+      <div id="q-text">Loading question...</div>
+      <div id="options"></div>
+      <div id="feedback"></div>
+
+      <div id="quiz-controls">
+        <button id="next-btn">Next</button>
+        <span id="score-display"></span>
       </div>
     </div>
-  </div>
+  </section>
+
   <footer>
-    <p>Made by Marcia Lealao | IS 201 | BYU | 2026</p>
-    <a href="index.html">← Back to Portfolio</a>
+    © 2026 Couponing Portfolio Page • <a href="index.html">Return Home</a>
   </footer>
 
+  <!-- QUIZ SCRIPT -->
   <script>
-    
+    const quizData = [
+      {
+        q: "What is coupon stacking?",
+        options: [
+          "Using multiple coupons on one item",
+          "Saving coupons for later",
+          "Cutting coupons neatly",
+          "Using expired coupons"
+        ],
+        answer: 0
+      },
+      {
+        q: "Which app is commonly used for cashback?",
+        options: ["WeatherPro", "Ibotta", "Spotify", "Maps+"],
+        answer: 1
+      },
+      {
+        q: "When is the best time to stock up?",
+        options: [
+          "When items are full price",
+          "During seasonal sales",
+          "When you feel like it",
+          "Only on weekends"
+        ],
+        answer: 1
+      }
+    ];
+
+    let index = 0;
+    let score = 0;
+
+    const qText = document.getElementById("q-text");
+    const optionsDiv = document.getElementById("options");
+    const feedback = document.getElementById("feedback");
+    const nextBtn = document.getElementById("next-btn");
+    const scoreDisplay = document.getElementById("score-display");
+
+    function loadQuestion() {
+      const current = quizData[index];
+      qText.textContent = current.q;
+      optionsDiv.innerHTML = "";
+      feedback.textContent = "";
+
+      current.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.className = "opt-btn";
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(i);
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      const correct = quizData[index].answer;
+      const buttons = document.querySelectorAll(".opt-btn");
+
+      buttons.forEach(b => b.disabled = true);
+
+      if (selected === correct) {
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+        score++;
+      } else {
+        feedback.textContent = "Incorrect.";
+        feedback.style.color = "red";
+      }
+
+      scoreDisplay.textContent = `Score: ${score}/${quizData.length}`;
+    }
+
+    nextBtn.onclick = () => {
+      index++;
+      if (index < quizData.length) {
+        loadQuestion();
+      } else {
+        qText.textContent = "Quiz complete!";
+        optionsDiv.innerHTML = "";
+        feedback.textContent = "";
+        nextBtn.disabled = true;
+      }
+    };
+
+    loadQuestion();
   </script>
+
 </body>
 </html>
