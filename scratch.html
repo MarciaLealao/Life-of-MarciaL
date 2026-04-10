@@ -3,96 +3,62 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcia's Deals & Hobbies</title>
-    <link href="mystyles.css" rel="stylesheet" />
+    <title>Marcia's Hobby Page</title>
     <style>
-        body { background-color: #f4f7f6; font-family: 'Verdana', sans-serif; color: #333; margin: 0; padding: 0; }
-        nav { background: #27ae60; padding: 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.1em; }
-        nav a:hover { text-decoration: underline; }
-        .main-container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); text-align: center; }
-        h1, h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; text-align: center; }
-        .media-block { background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 30px 0; border-left: 5px solid #27ae60; }
-        .app-box { border: 2px dashed #27ae60; padding: 30px; text-align: center; border-radius: 15px; background: #fdfdfd; margin-top: 30px; }
-        img { width: 100%; max-width: 400px; border-radius: 10px; margin: 20px auto; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: block; }
-        button { background: #27ae60; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin: 5px; }
-        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9em; }
+        body { background-color: #f4f7f6; font-family: 'Verdana', sans-serif; margin: 0; }
+        nav { background: #27ae60; padding: 20px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; }
+        .main-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; }
+        h1, h2 { color: #2e7d32; }
+        .media-block { background: #e8f5e9; padding: 20px; border-radius: 12px; margin: 30px 0; }
+        .app-box { border: 2px dashed #27ae60; padding: 20px; border-radius: 15px; margin-top: 30px; }
+        button { background: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
         ol { display: inline-block; text-align: left; }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html">← Back to Resume</a>
+        <a href="#video">Video</a>
+        <a href="#tableau">Data Viz</a>
+        <a href="#app">Savings App</a>
+    </nav>
+    <div class="main-container">
+        <h1>Passion for Marketing & Deals</h1>
+        <p>I mastered the art of "Stacking" and consumer research early on.</p>
+        
+        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600" alt="Deals" style="width:100%; border-radius:10px;">
 
-  <nav>
-    <a href="index.html">← Back to Portfolio</a>
-    <a href="#video">Video Guide</a>
-    <a href="#tableau">Data Viz</a>
-    <a href="#app">Savings App</a>
-  </nav>
+        <div class="media-block" id="video">
+            <h2>The Power of Strategy</h2>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                        src="https://www.youtube.com/embed/Z57_pZ864H0" 
+                        title="YouTube video" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-  <div class="main-container">
-    <h1>My Passion for a Great Deal!</h1>
-    <p>I got my first rush for a good deal when I became a young mother. I needed to find a way to provide for my children, and that's when someone introduced me to couponing!</p>
+        <div id="tableau">
+            <h2>Consumer Spending Data</h2>
+            <iframe src="https://public.tableau.com/views/ConsumerSpending/Dashboard?:showVizHome=no&:embed=true" 
+                    width="100%" height="500px" frameborder="0"></iframe>
+        </div>
 
-    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=900" alt="Couponing Stockpile">
-
-    <h2>My Deal Seeking Journey</h2>
-    <ol>
-      <li>Purchased my first coupons (age 22)</li>
-      <li>Mastered the "Tricks of the Trade":
-        <ul>
-          <li><strong>Stacking:</strong> Combining store and manufacturer coupons.</li>
-          <li><strong>Run Deals:</strong> Extremely short-term, high-value errors or sales.</li>
-          <li><strong>Filler Items:</strong> Small items used to reach a threshold.</li>
-        </ul>
-      </li>
-      <li>Currently chasing online-only digital stacks.</li>
-    </ol>
-
-    <div class="media-block" id="video">
-      <h2>Learn the "Stacking" Method</h2>
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                src="https://www.youtube-nocookie.com/embed/Z57_pZ864H0" 
-                title="Couponing Tips" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-      </div>
+        <div class="app-box" id="app">
+            <h2>Savings Goal Calculator</h2>
+            <input type="number" id="weekly" placeholder="Weekly Savings ($)" style="padding:8px;">
+            <input type="number" id="goal" placeholder="Goal ($)" style="padding:8px;">
+            <button onclick="calc()">Calculate</button>
+            <p id="res" style="margin-top:10px; font-weight:bold; color:#27ae60;"></p>
+        </div>
     </div>
-
-    <div id="tableau" style="margin-top: 30px; text-align: center;">
-      <h2>Consumer Spending Trends</h2>
-      <iframe src="https://public.tableau.com/views/ConsumerSpending/Dashboard?:showVizHome=no&:embed=true" 
-              width="100%" height="550px" frameborder="0"></iframe>
-    </div>
-
-    <div class="app-box" id="app">
-        <h2>Savings Goal Calculator</h2>
-        <p>Enter your info below to see how fast you'll hit your goal!</p>
-        <input type="number" id="weekly" placeholder="Weekly Savings ($)">
-        <input type="number" id="goal" placeholder="Savings Goal ($)">
-        <button onclick="calc()">Calculate</button>
-        <p id="res" style="margin-top: 15px; font-size: 1.2em; color: #27ae60;"></p>
-    </div>
-
-  </div>
-
-  <footer>
-    <p>Made by Marcia Lealao | IS 201 | BYU | 2026</p>
-  </footer>
-
-  <script>
-    function calc() {
-      const w = document.getElementById('weekly').value;
-      const g = document.getElementById('goal').value;
-      const r = document.getElementById('res');
-      if(w > 0 && g > 0) {
-        const weeks = Math.ceil(g / w);
-        r.innerHTML = `It will take you <strong>${weeks} weeks</strong> to reach your goal!`;
-      } else {
-        r.innerText = "Please enter valid numbers.";
-      }
-    }
-  </script>
+    <script>
+        function calc() {
+            const w = document.getElementById('weekly').value;
+            const g = document.getElementById('goal').value;
+            const r = document.getElementById('res');
+            if(w > 0 && g > 0) r.innerHTML = `You'll reach your goal in ${Math.ceil(g/w)} weeks!`;
+        }
+    </script>
 </body>
 </html>
