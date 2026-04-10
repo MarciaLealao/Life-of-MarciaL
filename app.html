@@ -136,6 +136,7 @@
 
       <div id="quiz-controls">
         <button id="next-btn">Next</button>
+        <button id="restart-btn">Restart</button>
         <span id="score-display"></span>
       </div>
     </div>
@@ -146,106 +147,118 @@
     </div>
   </div>
 
-  <script>
-    const quizData = [
-      {
-        q: "What is coupon stacking?",
-        options: [
-          "Using multiple discounts on the same purchase",
-          "Saving coupons in a stack for later",
-          "Using expired coupons",
-          "Only using paper coupons"
-        ],
-        answer: 0
-      },
-      {
-        q: "Which of these helps you save the MOST?",
-        options: [
-          "Buying only name brands at full price",
-          "Combining store sales, coupons, and cashback",
-          "Shopping without a list",
-          "Ignoring weekly ads"
-        ],
-        answer: 1
-      },
-      {
-        q: "What’s a smart way to start couponing?",
-        options: [
-          "Trying to coupon at five stores at once",
-          "Starting with one store and a few key items",
-          "Only clipping random coupons",
-          "Buying things just because you have a coupon"
-        ],
-        answer: 1
-      },
-      {
-        q: "When is the best time to stock up?",
-        options: [
-          "When items are full price",
-          "During a sale with coupons and/or cashback",
-          "Whenever you feel like it",
-          "Only on weekends"
-        ],
-        answer: 1
-      }
-    ];
+<script>
+  const quizData = [
+    {
+      q: "What is coupon stacking?",
+      options: [
+        "Using multiple discounts on the same purchase",
+        "Saving coupons in a stack for later",
+        "Using expired coupons",
+        "Only using paper coupons"
+      ],
+      answer: 0
+    },
+    {
+      q: "Which of these helps you save the MOST?",
+      options: [
+        "Buying only name brands at full price",
+        "Combining store sales, coupons, and cashback",
+        "Shopping without a list",
+        "Ignoring weekly ads"
+      ],
+      answer: 1
+    },
+    {
+      q: "What’s a smart way to start couponing?",
+      options: [
+        "Trying to coupon at five stores at once",
+        "Starting with one store and a few key items",
+        "Only clipping random coupons",
+        "Buying things just because you have a coupon"
+      ],
+      answer: 1
+    },
+    {
+      q: "When is the best time to stock up?",
+      options: [
+        "When items are full price",
+        "During a sale with coupons and/or cashback",
+        "Whenever you feel like it",
+        "Only on weekends"
+      ],
+      answer: 1
+    }
+  ];
 
-    let index = 0;
-    let score = 0;
+  let index = 0;
+  let score = 0;
 
-    const qText = document.getElementById("q-text");
-    const optionsDiv = document.getElementById("options");
-    const feedback = document.getElementById("feedback");
-    const nextBtn = document.getElementById("next-btn");
-    const scoreDisplay = document.getElementById("score-display");
+  const qText = document.getElementById("q-text");
+  const optionsDiv = document.getElementById("options");
+  const feedback = document.getElementById("feedback");
+  const nextBtn = document.getElementById("next-btn");
+  const scoreDisplay = document.getElementById("score-display");
+  const restartBtn = document.getElementById("restart-btn"); // ⭐ NEW
 
-    function loadQuestion() {
-      const current = quizData[index];
-      qText.textContent = current.q;
+  function loadQuestion() {
+    const current = quizData[index];
+    qText.textContent = current.q;
+    optionsDiv.innerHTML = "";
+    feedback.textContent = "";
+
+    current.options.forEach((opt, i) => {
+      const btn = document.createElement("button");
+      btn.className = "opt-btn";
+      btn.textContent = opt;
+      btn.onclick = () => checkAnswer(i);
+      optionsDiv.appendChild(btn);
+    });
+  }
+
+  function checkAnswer(selected) {
+    const correct = quizData[index].answer;
+    const buttons = document.querySelectorAll(".opt-btn");
+
+    buttons.forEach(b => b.disabled = true);
+
+    if (selected === correct) {
+      feedback.textContent = "Correct!";
+      feedback.style.color = "green";
+      score++;
+    } else {
+      feedback.textContent = "Not quite. Keep going!";
+      feedback.style.color = "red";
+    }
+
+    scoreDisplay.textContent = `Score: ${score}/${quizData.length}`;
+  }
+
+  nextBtn.onclick = () => {
+    index++;
+    if (index < quizData.length) {
+      loadQuestion();
+    } else {
+      qText.textContent = "Quiz complete!";
       optionsDiv.innerHTML = "";
-      feedback.textContent = "";
+      feedback.textContent = `Final score: ${score}/${quizData.length}`;
+      feedback.style.color = "#2980b9";
 
-      current.options.forEach((opt, i) => {
-        const btn = document.createElement("button");
-        btn.className = "opt-btn";
-        btn.textContent = opt;
-        btn.onclick = () => checkAnswer(i);
-        optionsDiv.appendChild(btn);
-      });
+      nextBtn.style.display = "none";     // hide next
+      restartBtn.style.display = "inline-block"; // show restart
     }
+  };
 
-    function checkAnswer(selected) {
-      const correct = quizData[index].answer;
-      const buttons = document.querySelectorAll(".opt-btn");
-
-      buttons.forEach(b => b.disabled = true);
-
-      if (selected === correct) {
-        feedback.textContent = "Correct!";
-        feedback.style.color = "green";
-        score++;
-      } else {
-        feedback.textContent = "Not quite. Keep going!";
-        feedback.style.color = "red";
-      }
-
-      scoreDisplay.textContent = `Score: ${score}/${quizData.length}`;
-    }
-
-    nextBtn.onclick = () => {
-      index++;
-      if (index < quizData.length) {
-        loadQuestion();
-      } else {
-        qText.textContent = "Quiz complete!";
-        optionsDiv.innerHTML = "";
-        feedback.textContent = `Final score: ${score}/${quizData.length}`;
-        feedback.style.color = "#2980b9";
-        nextBtn.disabled = true;
-      }
-    };
-
+  restartBtn.onclick = () => {
+    index = 0;
+    score = 0;
+    scoreDisplay.textContent = "";
+    nextBtn.style.display = "inline-block";
+    restartBtn.style.display = "none";
     loadQuestion();
-  </script>
+  };
+
+  loadQuestion();
+</script>
 </body>
 </html>

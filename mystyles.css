@@ -117,3 +117,20 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
+#restart-btn {
+  background:#e67e22;
+  color:#fff;
+  border:none;
+  padding:9px 22px;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:0.95rem;
+}
+
+#restart-btn:hover {
+  background:#cf6d1a;
+}
+#restart-btn {
+  display:none;
+}
+
