@@ -22,20 +22,20 @@
     <header id="about">
       <h1>I Love a Good Deal!</h1>
       <p>Couponing is my favorite way to turn everyday shopping into a game of strategy and savings.</p>
-      <!-- Non-Bootstrap image -->
-      <img 
-  src="https://images.unsplash.com/photo-1607083206968-13611e3d76d5?auto=format&fit=crop&w=900&q=80"
-  alt="Cutting coupons on a table"
-  class="coupon-hero"
-/>
 
+      <!-- FIXED IMAGE -->
+      <img 
+        src="https://images.unsplash.com/photo-1607083206968-13611e3d76d5?auto=format&fit=crop&w=900&q=80"
+        alt="Cutting coupons on a table"
+        class="coupon-hero"
+      />
     </header>
 
     <section id="strategy">
       <h2>How I Approach Couponing</h2>
       <p>My process mixes planning, timing, and a little bit of math. Here’s how I break it down:</p>
 
-      <!-- Ordered list with embedded unordered list (requirement) -->
+      <!-- Ordered list with embedded unordered list -->
       <ol>
         <li>Getting Started
           <ul>
@@ -61,48 +61,48 @@
       </ol>
     </section>
 
-    <!-- YouTube video section -->
+    <!-- FIXED YOUTUBE SECTION -->
     <section id="video" class="video-section">
       <h2>Couponing in Action</h2>
       <p>Here’s a video that explains how stacking coupons and sales can dramatically cut your bill.</p>
+
       <div style="max-width: 700px; margin: 0 auto;">
         <iframe width="100%" height="390"
-  src="https://www.youtube.com/embed/2fZpKpZ0QnA"
-  title="How to Stack Coupons and Save Big"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
+          src="https://www.youtube.com/embed/3C9wZfFzN88"
+          title="Extreme Couponing for Beginners"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
-    </section
+    </section>
 
-    <!-- Tableau embed section -->
+    <!-- FIXED TABLEAU SECTION -->
     <section id="tableau" class="graph-section">
-  <h2>Coupon Savings Visualization</h2>
-  <p><i>This live Tableau visualization shows how savings can add up over time.</i></p>
+      <h2>Coupon Savings Visualization</h2>
+      <p><i>This live Tableau visualization shows how savings can add up over time.</i></p>
 
-  <div class='tableauPlaceholder' id='couponViz' style='position: relative'>
-  <object class='tableauViz' style='display:none;'>
-    <param name='host_url' value='https://public.tableau.com/' />
-    <param name='embed_code_version' value='3' />
-    <param name='site_root' value='' />
-    <param name='name' value='GrocerySavingsDashboard/CouponSavings' />
-    <param name='tabs' value='no' />
-    <param name='toolbar' value='yes' />
-  </object>
-</div>
+      <div class='tableauPlaceholder' id='couponViz' style='position: relative'>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https://public.tableau.com/' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='GroceryBudgetDashboard/GroceryBudget' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+        </object>
+      </div>
 
-<script type='text/javascript'>
-  var divElement = document.getElementById('couponViz');
-  var vizElement = divElement.getElementsByTagName('object')[0];
-  vizElement.style.width = '100%';
-  vizElement.style.height = '600px';
-  var scriptElement = document.createElement('script');
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
-
-</section>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('couponViz');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = '600px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </section>
 
     <footer style="text-align:center; margin-top:40px; font-size:0.9rem; color:#777;">
       <p>Back to my <a href="index.html">professional resume</a> or try my <a href="app.html">couponing quiz app</a>.</p>
